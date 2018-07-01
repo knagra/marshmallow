@@ -259,7 +259,6 @@ class Unmarshaller(ErrorStore):
                     input=data, input_type=data.__class__.__name__,
                 )
                 self.error_field_names = [SCHEMA]
-                errors = self.get_errors()
                 errors.setdefault(SCHEMA, []).append(msg)
                 # Input data type is incorrect, so we can bail out early
                 break
